@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dictionaries Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dictionaries_categories.each do |dictionaries_category| %>
+      <tr>
+        <td><%= dictionaries_category.value %></td>
+        <td><%= link_to 'Show', dictionaries_category %></td>
+        <td><%= link_to 'Edit', edit_dictionaries_category_path(dictionaries_category) %></td>
+        <td><%= link_to 'Destroy', dictionaries_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dictionaries Category', new_dictionaries_category_path %>

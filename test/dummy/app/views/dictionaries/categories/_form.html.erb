@@ -1,0 +1,22 @@
+<%= form_with(model: dictionaries_category, local: true) do |form| %>
+  <% if dictionaries_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dictionaries_category.errors.count, "error") %> prohibited this dictionaries_category from being saved:</h2>
+
+      <ul>
+      <% dictionaries_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_field :value, id: :dictionaries_category_value %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
