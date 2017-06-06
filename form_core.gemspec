@@ -21,6 +21,4 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 5.0"
   s.add_dependency "duck_record", "~> 0"
-
-  s.add_development_dependency "sqlite3", "~> 0"
 end
